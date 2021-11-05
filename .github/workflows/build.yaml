@@ -6,6 +6,8 @@ on:
       - build
     paths-ignore:
       - '**/__tests__/**'
+  schedule:
+    - cron: '*/6 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -47,6 +49,7 @@ jobs:
         run: yarn build
 
       - name: Deploy to GitHub Pages
+        if: success()
         uses: crazy-max/ghaction-github-pages@v2.2.0
         with:
           repo: limitoo/limitoo.github.io 
