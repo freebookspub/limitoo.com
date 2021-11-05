@@ -3,6 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Limitoo News`,
     description: `Limitoo News is global news, entertainment, and life website. It will extract hot news from professional news websites in various countries. Let you watch the news of various countries at any time. visit: https://limitoo.com`,
+    key: 'Limitoo,limitoo,Limitoo news,news,gobal news,laster news,video,chat',
     author: `@Limitoo`,
     siteUrl: url,
     twitter: 'https://twitter.com/Limitoo2',
@@ -72,7 +73,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: url,
         sitemap: `${url}/sitemap.xml`,
         env: {
           development: {
