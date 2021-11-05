@@ -1,13 +1,13 @@
 name: build
 
 on:
+  schedule:
+    - cron: '*/10 * * * *'
   push:
     branches:
       - build
     paths-ignore:
       - '**/__tests__/**'
-  schedule:
-    - cron: '*/6 * * * *'
   workflow_dispatch:
 
 jobs:

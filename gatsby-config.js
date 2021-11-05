@@ -1,4 +1,4 @@
-const url = `https://limitoo.com`
+const url = 'https://limitoo.com'
 module.exports = {
   siteMetadata: {
     title: `Limitoo News`,
@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-cname`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
