@@ -1,4 +1,4 @@
-iname: build
+name: build
 
 on:
   push:
