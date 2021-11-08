@@ -55,6 +55,7 @@ function Bbc({ news }) {
             className="image-size-bbc"
             src={imagesUrl}
             fallback={backImgUrl}
+            alt={title}
           />
         </Col>
       </Row>

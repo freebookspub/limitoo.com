@@ -28,6 +28,7 @@ const blogPost = ({ data }) => {
           className="image-size"
           src={post.img_url}
           fallback={post.iconload_img}
+          alt={post.alt}
         />
       )
       showtext = context.map((item, index) => {
@@ -51,6 +52,7 @@ const blogPost = ({ data }) => {
           className="image-size"
           src={post.img_url}
           fallback={post.load_img}
+          alt={post.alt}
         />
       )
       showtext = context.map((item, index) => {
@@ -96,6 +98,7 @@ const blogPost = ({ data }) => {
           className="image-size"
           src={post.img_url}
           fallback={post.load_img}
+          alt={post.alt}
         />
       )
       showtext = context.map((item, index) => {
@@ -167,7 +170,7 @@ const blogPost = ({ data }) => {
     case 'aljazeera':
       showHead = <div>
         <div className="min-title">{post.description}</div>
-        <Image preview={false} className="image-inside" src={post.src} fallback={backImgUrl}/>
+        <Image preview={false} className="image-inside" src={post.src} fallback={backImgUrl} alt={post.alt}/>
         <div className="imgText">{post.alt}</div>
       </div>
 
@@ -200,6 +203,7 @@ const blogPost = ({ data }) => {
             className="image-inside"
             src={imagesUrl}
             fallback={backImgUrl}
+            alt={post.alt}
           />
         )
       }

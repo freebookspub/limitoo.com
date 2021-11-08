@@ -45,13 +45,13 @@ function Item({ news }) {
       <Row gutter={[8]} justify="start">
         <Col span={24}>
           <Link to={`/posts/${href_hash}/`} className="head1">
-          <img className="image-size imge-small" src={imagesUrl} fallback={backImgUrl} />
+          <img className="image-size imge-small" src={imagesUrl} fallback={backImgUrl} alt={title} />
             {title}
           </Link>
           <p className="desc">{description}</p>
         </Col>
       </Row>
-      <div className="h05"></div>
+      <div className="h05" />
       <Row gutter={[8]} justify="start" align="middle">
         <Col span={8}>
           <Tag>{menu}</Tag>

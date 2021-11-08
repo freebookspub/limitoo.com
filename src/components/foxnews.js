@@ -56,7 +56,7 @@ function FoxNews({ news }) {
         </Row>
       </div>
       <div>
-        <img preview={false} className="image-size imge-big" src={imagesUrl} fallback={backImgUrl} />
+        <img preview={false} className="image-size imge-big" src={imagesUrl} fallback={backImgUrl} alt={title} />
       </div>
       <div className="it">
         <Row gutter={[8]} justify="start" align="middle">
