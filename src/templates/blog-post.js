@@ -234,7 +234,7 @@ const blogPost = ({ data }) => {
             />
           </Affix>
         </div>
-        <div className="posttitle">{post.title}</div>
+        <h1 className="posttitle">{post.title}</h1>
         {post.source ==='aljazeera'? showHead: ''}
         {imgshow}
         {showtext}
