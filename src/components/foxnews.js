@@ -47,7 +47,7 @@ function FoxNews({ news }) {
         <Row gutter={[8]} justify="start">
           <Col span={24}>
             <Link to={`/posts/${href_hash}/`} className="head1">
-              {title}
+              <h1 className="head1">{title}</h1>
             </Link>
           </Col>
           <Col span={24}>
