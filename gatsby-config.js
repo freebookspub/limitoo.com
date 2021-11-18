@@ -49,6 +49,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-8271085933247410`
+      },
+    },
+    {
       resolve: `gatsby-source-mysql`,
       options: {
         connectionDetails: {
