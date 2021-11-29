@@ -41,18 +41,18 @@ function Item({ news }) {
   }
 
   return (
-    <div className="item" key={load_img}>
+    <article className="item" key={load_img}>
       <Row gutter={[8]} justify="start">
         <Col span={24}>
           <Link to={`/posts/${href_hash}/`} className="head1">
             <img className="image-size imge-small" src={imagesUrl} fallback={backImgUrl} alt={title} />
-            <h1 className="head1">{title}</h1>
+            <h2 className="head1">{title}</h2>
           </Link>
           <p className="desc">{description}</p>
         </Col>
       </Row>
       <div className="h05" />
-      <Row gutter={[8]} justify="start" align="middle">
+      <Row gutter={[8]} justify="space-between" align="middle">
         <Col span={8}>
           <Tag>{menu}</Tag>
         </Col>
@@ -65,7 +65,7 @@ function Item({ news }) {
           </div>
         </Col>
       </Row>
-    </div>
+    </article>
   )
 }
 

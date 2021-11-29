@@ -6,6 +6,11 @@
 }
 .it {
     padding: 0.5rem;
+    padding-bottom: 0;
+    background-color: #fff;
+}
+.its {
+    padding: 0.5rem;
     background-color: #fff;
 }
 .item {
@@ -29,12 +34,13 @@
 .desc {
     color: #434343;
     margin-bottom: 0.5rem;
+    margin-top: .3rem;
     font-size: 0.9rem;
     -webkit-letter-spacing: normal;
     -moz-letter-spacing: normal;
     -ms-letter-spacing: normal;
     letter-spacing: normal;
-    line-height: 1.275rem;
+    line-height: 1.1rem;
 }
 .h05 {
     height: .5rem;
@@ -181,3 +187,8 @@
 .h1rem {
     height: 1rem;
 }
+.noshow {
+    visibility: hidden;
+    position: absolute;
+}
+

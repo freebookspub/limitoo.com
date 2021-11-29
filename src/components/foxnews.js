@@ -42,12 +42,12 @@ function FoxNews({ news }) {
     imagesUrl = src
   }
   return (
-    <div className="items" key={img_url}>
+    <article className="items" key={img_url}>
       <div className="it">
         <Row gutter={[8]} justify="start">
           <Col span={24}>
             <Link to={`/posts/${href_hash}/`} className="head1">
-              <h1 className="head1">{title}</h1>
+              <h2 className="head1">{title}</h2>
             </Link>
           </Col>
           <Col span={24}>
@@ -58,7 +58,7 @@ function FoxNews({ news }) {
       <div>
         <img preview={false} className="image-size imge-big" src={imagesUrl} fallback={backImgUrl} alt={title} />
       </div>
-      <div className="it">
+      <div className="its">
         <Row gutter={[8]} justify="start" align="middle">
           <Col span={7}>
             <Tag>{menu}</Tag>
@@ -73,7 +73,7 @@ function FoxNews({ news }) {
           </Col>
         </Row>
       </div>
-    </div>
+    </article>
   )
 }
 

@@ -84,9 +84,9 @@ const blogPost = ({ data }) => {
             return <div key={index} dangerouslySetInnerHTML={html} />
           }
           return (
-            <div className="content" key={index}>
+            <p className="content" key={index}>
               {item}
-            </div>
+            </p>
           )
         }
       })
@@ -115,9 +115,9 @@ const blogPost = ({ data }) => {
             return <div key={index} dangerouslySetInnerHTML={html} />
           }
           return (
-            <div className="content" key={index}>
+            <p className="content" key={index}>
               {item}
-            </div>
+            </p>
           )
         }
       })
@@ -137,9 +137,9 @@ const blogPost = ({ data }) => {
             return <div key={index} dangerouslySetInnerHTML={html} />
           }
           return (
-            <div className="content" key={index}>
+            <p className="content" key={index}>
               {item}
-            </div>
+            </p>
           )
         }
       })
@@ -160,9 +160,9 @@ const blogPost = ({ data }) => {
             return <div key={index} dangerouslySetInnerHTML={html} />
           }
           return (
-            <div className="content" key={index}>
+            <p className="content" key={index}>
               {item}
-            </div>
+            </p>
           )
         }
       })
@@ -188,9 +188,9 @@ const blogPost = ({ data }) => {
             return <div key={index} dangerouslySetInnerHTML={html} />
           }
           return (
-            <div className="content" key={index}>
+            <p className="content" key={index}>
               {item}
-            </div>
+            </p>
           )
         }
       })
@@ -208,9 +208,9 @@ const blogPost = ({ data }) => {
         )
       }
       showtext = context.map((item, index) => (
-        <div className="content" key={index}>
+        <p className="content" key={index}>
           {item}
-        </div>
+        </p>
       ))
   }
 
@@ -234,13 +234,15 @@ const blogPost = ({ data }) => {
             />
           </Affix>
         </div>
-        <h1 className="posttitle">{post.title}</h1>
-        {post.source ==='aljazeera'? showHead: ''}
-        {imgshow}
-        {showtext}
-        <div className="source">
-          source: {href}
-        </div>
+        <article>
+          <h1 className="posttitle">{post.title}</h1>
+          {post.source ==='aljazeera'? showHead: ''}
+          {imgshow}
+          {showtext}
+          <div className="source">
+            source: {href}
+          </div>
+        </article>
       </div>
     </Layout>
   )

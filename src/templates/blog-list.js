@@ -12,12 +12,13 @@ class IndexLists extends React.Component {
   render() {
     const { data, pageContext } = this.props
     const posts = data.allMysqlLists.edges
-    const siteTitle = data.site.siteMetadata.title
+    const { siteTitle } = data.site.siteMetadata
     const { currentPage, numPages } = pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
     const nextPage = (currentPage + 1).toString()
+    const description = `Limitoo News is free global news, entertainment, and life website. It will extract hot news from professional news websites in various countries.`
     return (
       <Layout>
         <SEO
@@ -30,6 +31,7 @@ class IndexLists extends React.Component {
             `magazine`,
           ]}
         />
+        <h1 className="noshow">{description}</h1>
         {posts.map(({ node }, index) => {
           switch (node.source) {
             case "nytime":
