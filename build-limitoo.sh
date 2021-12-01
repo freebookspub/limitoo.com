@@ -12,7 +12,6 @@ if [[ "$LEN" = "" ]]; then
 		cd /root/limitoo/limitoo-website
 		git pull
 		yarn
-		rm -rf public
 		/root/.nvm/versions/node/v14.18.1/bin/yarn deploy
 		python3 /root/limitoo/limitoo-website/setmysql.py
 	fi
