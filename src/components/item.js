@@ -33,6 +33,7 @@ function Item({ news }) {
     country,
   } = news
   dayjs.extend(relativeTime)
+  const tagcolor = tagclr.tagsclr[menu]
   const ctime = dayjs().to(dayjs(create_time))
   let backImgUrl = `https://oss.edms.site/news/${load_img}`
   let imagesUrl = img_url
@@ -40,9 +41,6 @@ function Item({ news }) {
     backImgUrl = `https://oss.edms.site/news/${local_src}`
     imagesUrl = src
   }
-  console.log("objec1111t", tagclr.tagsclr);
-  const tagcolor = tagclr.tagsclr[menu]
-
   return (
     <article className="item" key={load_img}>
       <Row gutter={[8]} justify="start">

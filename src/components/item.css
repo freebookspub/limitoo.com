@@ -21,7 +21,7 @@
     background-color: #fff;
 }
 .head1 {
-    color: #061178;
+    color: #00109e;
     font-size: 1.1125rem;
     line-height: 1.3375rem;
     font-weight: 500;
@@ -93,8 +93,9 @@
         margin-right: .5rem;
 	}
 	.head1 {
-    color: #061178;
+    color: #00109e;
     font-size: .9rem;
+    line-height: 1rem;
     font-weight: 500;
 	}
 	.head1:visited {

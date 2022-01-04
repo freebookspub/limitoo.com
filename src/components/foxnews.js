@@ -45,7 +45,6 @@ function FoxNews({ news }) {
   }
   return (
     <article className="items" key={img_url}>
-      {tagclr}
       <div className="it">
         <Row gutter={[8]} justify="start">
           <Col span={24}>
