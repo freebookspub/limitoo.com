@@ -10,6 +10,7 @@ import * as dayjs from "dayjs"
 import * as relativeTime from "dayjs/plugin/relativeTime"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import tagclr from "./tags"
 
 import { Row, Col, Image, Tag } from "antd"
 
@@ -39,6 +40,8 @@ function Item({ news }) {
     backImgUrl = `https://oss.edms.site/news/${local_src}`
     imagesUrl = src
   }
+  console.log("objec1111t", tagclr.tagsclr);
+  const tagcolor = tagclr.tagsclr[menu]
 
   return (
     <article className="item" key={load_img}>
@@ -54,7 +57,7 @@ function Item({ news }) {
       <div className="h05" />
       <Row gutter={[8]} justify="space-between" align="middle">
         <Col span={8}>
-          <Tag>{menu}</Tag>
+          <Tag color={tagcolor}>{menu}</Tag>
         </Col>
         <Col span={8}>
           <div className="ctime">{ctime}</div>
