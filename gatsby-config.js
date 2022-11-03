@@ -63,7 +63,7 @@ module.exports = {
         },
         queries: [
           {
-            statement: "select * from news ny, details nyd where ny.id = nyd.news_id order by ny.create_time desc limit 3000",
+            statement: "select * from news ny, details nyd where ny.id = nyd.news_id order by ny.create_time desc limit 1000",
             idFieldName: "title",
             name: "Lists",
           },
