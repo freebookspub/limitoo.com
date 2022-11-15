@@ -20,6 +20,7 @@ const blogPost = ({ data }) => {
     seoimges = post.src
   }
 
+
   switch (post.source) {
     case "foxnews":
       imgshow = (
@@ -152,7 +153,15 @@ const blogPost = ({ data }) => {
         const greyLine = "grey line"
         if (!item.includes(greyLine)) {
           if (item.includes(img)) {
-            const html = { __html: item }
+            let url = item
+            const website = 'https://www.rnz.co.nz'
+            const img = 'https://rnz-ressh.cloudinary.com/'
+            const str = url.includes(img)
+            const web = url.includes(website)
+            if (str && web) {
+              url = url.replace(new RegExp(website), '')
+            }
+            const html = { __html: url }
             return <div key={index} dangerouslySetInnerHTML={html} />
           }
           if (item.includes(div)) {

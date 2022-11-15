@@ -41,6 +41,16 @@ function Item({ news }) {
     backImgUrl = `https://oss.edms.site/news/${local_src}`
     imagesUrl = src
   }
+  if (source === 'rnz') {
+    const website = 'https://www.rnz.co.nz'
+    const img = 'https://rnz-ressh.cloudinary.com/'
+    const str = imagesUrl.includes(img)
+    const web = imagesUrl.includes(website)
+    if (str && web) {
+      imagesUrl = imagesUrl.replace(new RegExp(website), '')
+    }
+  }
+
   return (
     <article className="item" key={load_img}>
       <Row gutter={[8]} justify="start">
