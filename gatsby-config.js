@@ -19,8 +19,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -33,14 +33,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-antd`,
-    `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-antd",
+    "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-sitemap",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "G-QN25TS4PP3",
         // this option places the tracking script into the head of the DOM
@@ -49,7 +49,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-mysql`,
+      resolve: "gatsby-source-mysql",
       options: {
         connectionDetails: {
           // host: '130.61.52.228',
@@ -63,7 +63,8 @@ module.exports = {
         },
         queries: [
           {
-            statement: "select * from news ny, details nyd where ny.id = nyd.news_id order by ny.create_time desc limit 1000",
+            // statement: "select * from news ny, details nyd where ny.id = nyd.news_id order by ny.create_time desc limit 100",
+            statement: "SELECT * from news join details on news.id = details.news_id order BY news.create_time DESC  limit 1000",
             idFieldName: "title",
             name: "Lists",
           },
