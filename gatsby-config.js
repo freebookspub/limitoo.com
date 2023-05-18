@@ -1,36 +1,36 @@
 const url = 'https://limitoo.com'
 module.exports = {
   siteMetadata: {
-    title: `Limitoo News`,
-    description: `Limitoo News is free global news, entertainment, and life website. It will extract hot news from professional news websites in various countries.`,
+    title: "Limitoo News",
+    description: "Limitoo News is free global news, entertainment, and life website. It will extract hot news from professional news websites in various countries.",
     key: 'Limitoo,limitoo,Limitoo news,news,gobal news,laster news,video,chat',
-    author: `@Limitoo`,
+    author: "@Limitoo",
     siteUrl: url,
     twitter: 'https://twitter.com/Limitoo2',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-cname`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-image",
+    "gatsby-plugin-cname",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#560DF8`,
-        theme_color: `#560DF8`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        name: "gatsby-starter-default",
+        short_name: "starter",
+        start_url: "/",
+        background_color: "#560DF8",
+        theme_color: "#560DF8",
+        display: "minimal-ui",
+        icon: "src/images/gatsby-icon.png", // This path is relative to the root of the site.
       },
     },
     "gatsby-plugin-antd",
