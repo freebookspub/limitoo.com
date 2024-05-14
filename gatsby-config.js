@@ -49,6 +49,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingId: ["G-QN25TS4PP3"],
+        // this option places the tracking script into the head of the DOM
+        // other options
+      },
+    },
+    {
       resolve: "gatsby-source-mysql",
       options: {
         connectionDetails: {
